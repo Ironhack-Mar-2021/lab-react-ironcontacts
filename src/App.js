@@ -18,15 +18,30 @@ function App() {
     setRestOfContacts(copyRestOfContacts);
   };
 
-  const sortName = () => {};
+  const sortName = () => {
+    setShowContacts([...showContacts.sort((a, b) => {
+      return a.name.localeCompare(b.name)
+    })])
+  };
 
-  const sortPopularity = () => {};
+  const sortPopularity = () => {
+    setShowContacts([...showContacts.sort((a, b) => {
+      return b.popularity - a.popularity
+
+      // if (a.popularity > b.popularity) {
+      //   return -52
+      // } else { return 111 }
+    })])
+  };
+
+
+
   console.log(showContacts, restOfContacts);
   return (
     <div className="App">
       <button onClick={getRandomContact}>Add Random Contact</button>
-      <button>Name</button>
-      <button>Popularity</button>
+      <button onClick={sortName}>Name</button>
+      <button onClick={sortPopularity}>Popularity</button>
       <table>
         <thead>
           <tr>
