@@ -42,12 +42,13 @@ function App() {
       <button onClick={getRandomContact}>Add Random Contact</button>
       <button onClick={sortName}>Name</button>
       <button onClick={sortPopularity}>Popularity</button>
+      <button>Delete</button>
       <table>
         <thead>
           <tr>
             <td>Picture</td>
             <td>Name</td>
-            <td>Populariry</td>
+            <td>Popularity</td>
           </tr>
         </thead>
         <tbody>
